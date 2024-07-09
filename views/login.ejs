@@ -1,0 +1,49 @@
+<%-include('./common/header.ejs') %>
+
+<div class="container-fluid col-8 mt-4 pt-3 py-5 " 
+style=" border: solid 2px lightgrey ; border-radius: 10px;">
+    <h2 align="center"> Login </h2>
+    
+        <form action="/login" method="post">
+      <div class="mb-3">
+        <input type="email" class="form-control" name="email" id="exampleInputEmail1" 
+        placeholder="Email address" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+
+      <div class="mb-3">
+        <input type="password" class="form-control" name="password" 
+        placeholder="Password" id="exampleInputPassword1">
+     
+    
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+    <h4 align="right"> <a class="text-dark px-3"  href="/register"> 
+      Please register if you are a new user! </a></h4>
+    
+    </div>
+    
+
+    <br> <br> <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <%-include('./common/footer.ejs') %>

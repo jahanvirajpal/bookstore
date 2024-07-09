@@ -1,0 +1,52 @@
+<%-include('./header.ejs') %>
+
+<div class="container-fluid row">
+    
+
+<div class="col-12 col-md-3"> 
+<%-include('./left.ejs') %>
+</div>
+  
+
+<div class="col-12 col-md-9 my-5"> 
+<h1 align="center" class="pb-3 fw-bolder"> View Contact </h1>
+
+<% if(contact.length>0) { %>
+<table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Address</th>
+        <th>Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i=0; i<contact.length; i++){%>
+      <tr>
+        <td><%=contact[i].name %></td>
+        <td><%=contact[i].email %></td>
+        <td><%=contact[i].mobile %></td>
+        <td><%=contact[i].address %></td>
+        <td><%=contact[i].comments %></td>
+        <td> <button><a href="/delete_3/<%= contact[i]._id %>"> Delete </a></button></td>
+        <td> <button><a href="/edit_3/<%= contact[i]._id %>"> Edit</a></button></td>
+      </tr>
+      <% } %>
+      
+      
+    </tbody>
+  </table>
+
+
+  <% } else { %>
+    No records found
+  <%} %>
+
+
+
+
+
+
+</div>

@@ -1,0 +1,83 @@
+<%-include('./common/header.ejs') %>
+
+<div class="container-fluid my-5 pb-5 px-3">
+    <div class="row">
+
+        <div class="col-md-7 col-12 px-5">
+            <h2 class="py-3" >Contact Us </h2>
+            <p>Please fill up the form below to send us a message. 
+                We will contact you very soon.</p>
+
+
+            <form action="/contact" method="post">
+                <input type="text" class="form-control my-2" placeholder="Name :" name="name">
+                <input type="email" class="form-control my-2" placeholder="Email :" name="email">
+                <input type="number" class="form-control my-2" placeholder="Mobile :" name="mobile">
+                <input type="text" class="form-control my-2" placeholder="Address :" name="address">
+                <div class="form-floating">
+                <textarea class="form-control my-2" name="comments" id="textarea"></textarea>
+                <label for="textarea"> Comments :</label></div>
+                <input class="form-check-input" type="checkbox"> I agree to continue
+           <br>
+            <button type="submit" class="btn btn-primary my-3">Submit</button>
+        </form>
+
+        </div>
+
+        <div class="col-md-5 col-12 text-center text-danger fs-5">
+
+            <img height="400px" width="350px" src="images/contactus.png">
+
+            <ol style="list-style-type: none;" class="text-start">
+            <li><img height="25px" width="20px" src="images/locationlogo.png">
+            HappyBooks! Store, New Delhi, India</li>
+            <li> <img height="20px" width="20px" src="images/calllogo.png">
+            011-3456788 , 91-987654321</li>
+            <li> <img height="20px" width="20px" src="images/maillogo.png">
+            happybooks@gmail.com</li>
+            </ol>
+
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%-include('./common/footer.ejs') %>

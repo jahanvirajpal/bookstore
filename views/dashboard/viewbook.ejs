@@ -1,0 +1,63 @@
+<%-include('./header.ejs') %>
+
+<div class="container-fluid row">
+    
+
+<div class="col-12 col-md-3"> 
+<%-include('./left.ejs') %>
+</div>
+
+
+<div class="col-12 col-md-9 my-5"> 
+<h1 align="center" class="pb-3 fw-bolder"> View Books </h1>
+
+<form>
+<input class="w-25 my-4 bg-primary" type="text" name="search" placeholder="Search">
+    <input type="submit" class="btn btn-primary"  placeholder="Search">
+  </form>
+
+
+
+<% if(book.length>0) { %>
+    <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Book Name</th>
+            <th>Author's Name</th>
+            <th>Book Price</th>
+            <th>Book discount</th>
+            <th>Book offer</th>
+            <th>Book details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<book.length; i++){%>
+            <tr>
+              <td><%=book[i].bookname %></td>
+              <td><%=book[i].authorname %></td>
+              <td><%=book[i].bookprice %></td>
+              <td><%=book[i].discount %></td>
+              <td><%=book[i].offer %></td>
+              <td><%=book[i].details %></td>
+              <td><img height="100px" width="100px" src="<%=book[i].fileupload %>"></td>
+              <td> <button><a href="/delete_2/<%= book[i]._id %>"> Delete </a></button></td>
+              <td> <button><a href="/edit_2/<%= book[i]._id %>"> Edit</a> </button></td>
+            </tr>
+            <% } %>
+          
+          
+        </tbody>
+      </table>
+
+
+      <% } else { %>
+        No records found
+      <%} %>
+
+    </div>
+
+
+
+
+
+</div>

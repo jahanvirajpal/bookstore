@@ -1,0 +1,54 @@
+<%-include('./header.ejs') %>
+
+<div class="container-fluid row">
+    
+
+<div class="col-12 col-md-3"> 
+<%-include('./left.ejs') %>
+</div>
+
+
+
+<div class="container-fluid  col-9 mt-5 "> 
+  
+    <h2 class="fs-1 fw-bolder text-center pb-4 "> Add a Book</h2>
+
+    <center>
+      <form action="/addbook" enctype="multipart/form-data" method="post">
+        <input type="text" name="bookname" class="w-50 my-2 form-control" placeholder="Book name" 
+        aria-label="bookname" >
+      
+        <input type="text" name="authorname" class="w-50 my-2 form-control" placeholder="Book Author's name" 
+        aria-label="author'sname"  >
+      
+      
+        <input type="number" name="bookprice" class="w-50 my-2 form-control" placeholder="Book Price" 
+        aria-label="bookprice"  >
+      
+      
+        <input type="number" name="discount" class="w-50 my-2 form-control" placeholder="Discount" 
+        aria-label="discount"  >
+        
+        <input type="text" name="offer" class="w-50 my-2 form-control" placeholder="Any Offer" 
+        aria-label="offer"  >
+      
+      <textarea class="w-50 my-2 form-control" name="details" placeholder="Book details" 
+      aria-label="With textarea"></textarea>
+
+      <div class="input-group w-50 my-2"> <input type="file" name="fileupload" class="w-25 form-control">
+    <label class="w-25 input-group-text" >Upload</label></div>
+ 
+  <button type="submit" class="my-2 btn btn-primary">Submit</button>
+
+</form>
+
+    </center>
+
+    
+
+    </div>
+
+
+
+
+</div>

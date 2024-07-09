@@ -1,0 +1,93 @@
+ /* collection dropdown */
+
+.dropdown-menu{
+	border-radius: 0px;
+	padding: 5px;
+	box-shadow: 0px 3px 6px;
+    position: absolute; z-index:1 ;
+}
+
+.dropdown-menu li a{
+	color:black;
+	padding: 10px;
+}
+.dropdown:hover .dropdown-menu{ display: block; }
+
+
+#menu-bar{
+	color: white;
+	font-size: 3rem;
+	cursor: pointer;
+	display: none;
+}
+
+@media(max-width: 768px){
+
+	#menu-bar{
+		display: initial;
+	}
+
+	header .navbar-nav{
+		position: absolute;
+		top: 100%; right: 0; left: 0;
+		background: white;
+		padding: 10px 10px;
+		clip-path: polygon(0 0, 100% 0, 100% 0,0 0);
+
+	}
+	header .navbar-nav.active {
+		clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+	}
+
+	header .navbar-nav li{
+		display: block;
+		border-radius: .5rem;
+		padding: 5px;
+		margin: 0.9rem 0; 
+		background: #dc3545;
+	
+		}
+}
+
+
+
+/* cards */
+	
+.bookcard{margin: auto; border: solid 2px lightgrey ; border-radius: 10px;
+		box-shadow: 0px 0px 27px 11px rgba(0,0,0,.1); width: 350px; margin-top: 40px;}
+
+
+/* about page */
+
+.about {
+		background: linear-gradient(to top, rgb(255,255,255,0.7), rgba(255,255,255,0.7) 100%), 
+			url(../images/aboutbg.jpg); background-repeat: no-repeat; 
+			  background-position: center; background-size: cover;
+		   background-attachment: fixed;
+	}
+	
+
+/* book details page */
+
+.details h4{ color: #333; font-weight: 400;}
+
+
+/* media query  */
+
+	@media(max-width: 768px){
+
+		img{margin: 0; padding: 0;}
+		.logo {padding-left: 0px;}
+		.menu { padding-left: 0;}
+		
+	}
+
+
+
+
+
+
+
+
+
+	

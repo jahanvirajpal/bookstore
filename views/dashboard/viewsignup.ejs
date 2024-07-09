@@ -1,0 +1,68 @@
+
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+<link href ="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css">
+
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"> </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
+
+
+<%-include('./header.ejs') %>
+
+<div class="container-fluid row">
+    
+
+<div class="col-12 col-md-3"> 
+<%-include('./left.ejs') %>
+</div>
+  
+
+<div class="col-12 col-md-9 my-5"> 
+<h1 align="center" class="pb-3 fw-bolder"> View Signup </h1>
+
+<% if(data.length>0) { %>
+
+<table class="table table-bordered table-hover" id="example">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Mobile</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i=0; i<data.length; i++){%>
+      <tr>
+        <td> <%=data[i].username %> </td>
+        <td> <%=data[i].email %></td>
+        <td> <%=data[i].number %></td>
+        <td> <button><a href="/delete/<%= data[i]._id %>"> Delete </a></button></td>
+        <td> <button><a href="/edit/<%= data[i]._id %>"> Edit </a>  </button></td>
+      </tr>
+      <% } %>
+      
+      
+    </tbody>
+  </table>
+
+  <% } else { %>
+  No records found
+<%} %>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

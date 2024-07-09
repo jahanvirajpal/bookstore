@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>Index file</title>
+</head>
+<body>
+        <%-include('./common/header.ejs') %>
+
+
+<!-------------------------banners--------------
+------------------------------------------------>
+        
+        <div class="container-fluid" style="height: 600px;">
+                <img src="./images/bookbanner.webp" alt="" class="h-100 w-100"  >
+        </div>
+
+
+
+<!-------------------------vision--------------
+------------------------------------------------>
+
+        <div class="container-fluid  px-5 my-5 "> 
+                
+                <h3 class="text-danger fw-bolder text-center"> Our Vision </h3> <br> 
+                <p style="font-size: 16px;"> 
+                       Dear Readers, <br>
+
+                        We offer a huge collection of books from diverse categories of Fiction, 
+                        Non-fiction, Biographies, History, Religion, Self-Help, etc. We also offer 
+                        a collection of Investments and Management, Computers, Engineering, Medical, 
+                        College and School text reference books.
+                        
+                        We strive for customer satisfaction by offering a user-friendly search 
+                        engine, 
+                        efficient payment options and seamless delivery systems. Apart from all 
+                        this, we also provide great deals and discounts on our products.
+                        
+                        All the Publishers, Distributors and Authors around the country are
+                         welcome to partner with us and grow the HappyBooks! family. We would 
+                         like to thank our customers for shopping with us. You can write to us 
+                         on our e-mail id to share any suggestions or feedback you might have 
+                         regarding our website or services.</p>
+        </div>
+
+
+
+<!------------------------- books cards--------------
+------------------------------------------------>
+
+        <% if(data_index.length>0) { %>
+        <div class="container-fluid px-5 my-5 py-5" >
+                
+                  <h3 class="text-danger fw-bolder text-center">Books available </h3> <br>
+                  <h4 class="my-3 ps-4"> Top deals</h4>
+                  
+                  <div class="row ">
+
+                  <% for(var i=0; i<data_index.length; i++){%>
+                    
+            <div class="col-12 col-md-4 py-2 bookcard text-center" 
+                
+
+                <center><img class="rounded" src="<%=data_index[i].fileupload %>" height="150px" width="200px" ></center>
+ 
+                <div class="details">
+                  <h5 class="title"> <%=data_index[i].bookname %> </h5>
+                  <h6><%=data_index[i].authorname %></h6>
+
+                  
+                  <div class="text-danger">  Offer : <%=data_index[i].offer %> </div>
+
+                  <span class="fw-bolder fs-6">₹ <%=data_index[i].bookprice %> </span>  <del>₹ <%=data_index[i].discount %></del>
+                  <br>
+                  
+                   <a href="/bookdetails/<%= data_index[i]._id %>" class="text-dark">See Details</a>
+                </div>
+              </div>
+              <% } %>
+
+              <% } else { %>  
+                No records found
+              <%} %>
+            
+        
+                       
+                        
+              </div>
+              </div>
+
+
+
+
+<!------------------------- why us--------------
+------------------------------------------------>
+
+
+<div class="container-fluid  px-5 my-5 ">
+    <h3 class="text-danger fw-bolder text-center"> Why Us? </h3> <br>
+
+  <div class="whyus col-md-12 ">
+    <div class="row">
+    <div class="col-md-3 col-6 bg-white text-center"> <img height="100px" width="100px" src="images/fast-delivery.png"> 
+    <p><h5> Fast Delivery </h5> Shipping Worldwide</p></div>
+
+    <div class="col-md-3 col-6 bg-white text-center"> <img height="100px" width="100px" src="images/discount.png"> 
+      <p><h5> Open Discount </h5> Offering Open Discount</p></div>
+
+    <div class="col-md-3 col-6 bg-white text-center"> <img height="100px" width="100px" src="images/witness.png"> 
+        <p><h5> Eyes on Quality </h5> Publishing Quality Work</p></div>
+
+    <div class="col-md-3 col-6 bg-white text-center"> <img height="100px" width="100px" src="images/heart.png"> 
+          <p><h5> 24/7 Support  </h5>Serving Every Moments</p></div>
+
+
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+<!------------------------- picture --------------
+------------------------------------------------>
+
+<div class="container-fluid my-5 pt-5">
+   <img src="./images/bigpicture.jpg" class="w-100">  </div>
+
+
+
+
+        <%-include('./common/footer.ejs') %>
+    
+</body>
+</html> 

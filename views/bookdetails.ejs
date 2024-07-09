@@ -1,0 +1,46 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+ rel="stylesheet">
+
+ <link rel="stylesheet" href="../style/style.css">
+ 
+
+ <%-include('./common/header.ejs') %>
+ 
+ <div class="container-fluid px-5 my-5 ">
+    
+
+    <h2 class="py-3" >Book Details </h2>
+        <div class="row my-4">
+
+
+        <div class="col-12 col-md-7 py-5 pe-5 details">
+
+            <h4>Book name : <%= bookdata.bookname %></h4>
+            <h4>Author name : <%= bookdata.authorname %></h4>
+            <h4>Price : Rs. <%= bookdata.bookprice %></h4>
+            <h4>Discount : Rs. <%= bookdata.discount %></h4>
+            <h4>Offer : <%= bookdata.offer %></h4>
+            <h4>Details : <%= bookdata.details %></h4>
+            
+            <button class="btn btn-primary my-3">Add to Cart</button>
+        </div>
+
+        <div class="col-12 col-md-5">
+            <img class="rounded" src="/<%=bookdata.fileupload %>" height="400px" width="400px"> </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<%-include('./common/footer.ejs') %>
